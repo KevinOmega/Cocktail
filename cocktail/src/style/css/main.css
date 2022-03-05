@@ -1,0 +1,168 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  background: black;
+}
+
+.navbar {
+  background: #ff1020;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fce;
+}
+
+.navbar-center {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  margin-left: 2rem;
+}
+
+.navbar .links {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #222;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar .links {
+    position: initial;
+    height: 100%;
+    width: 50%;
+    background: transparent;
+  }
+  .navbar .links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar .links ul li {
+    padding: 1rem 3rem;
+  }
+  .navbar .links ul li a:hover {
+    color: #012;
+  }
+}
+
+.navbar .links li {
+  padding: 2.5rem;
+  list-style: none;
+}
+
+.navbar .links li a {
+  text-decoration: none;
+  color: #fce;
+  font-size: 1.2rem;
+}
+
+.navbar .links li a:hover {
+  color: #ff1020;
+}
+
+.navbar .links-active {
+  left: 0%;
+}
+
+.navbar .btn-container {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar .btn-container {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+.navbar .btn-container .links-btn, .navbar .btn-container .links-btn::before, .navbar .btn-container .links-btn::after {
+  margin-right: 2rem;
+  width: 1.8rem;
+  height: 0.3rem;
+  background: #fce;
+  border: none;
+  border-radius: 25%;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  z-index: 3;
+}
+
+.navbar .btn-container .links-btn::before {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: 0.7rem;
+}
+
+.navbar .btn-container .links-btn::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0.4rem;
+}
+
+.navbar .btn-container .links-btn-active {
+  opacity: 1;
+  background: #ff1020;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.navbar .btn-container .links-btn-active::before {
+  opacity: 0;
+}
+
+.navbar .btn-container .links-btn-active::after {
+  background: #ff1020;
+  -webkit-transform: rotate(270deg) translateX(0.7rem);
+          transform: rotate(270deg) translateX(0.7rem);
+}
+/*# sourceMappingURL=main.css.map */
