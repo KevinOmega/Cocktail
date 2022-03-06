@@ -206,6 +206,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .home .home-center {
@@ -221,8 +223,8 @@
 }
 
 .home:hover .home-center h2 {
-  -webkit-transform: translateY(-13rem);
-          transform: translateY(-13rem);
+  -webkit-transform: translateY(-10rem);
+          transform: translateY(-10rem);
 }
 
 .home:hover .home-center h4 {
@@ -232,14 +234,12 @@
 
 @media screen and (min-width: 800px) {
   .home {
-    background-color: transparent;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVhh8ExxYUx8_uPK_MMaE7sYeV4UAxYbLfgw&usqp=CAU"), -webkit-gradient(linear, left top, right top, color-stop(70%, black), color-stop(#222), to(#335));
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVhh8ExxYUx8_uPK_MMaE7sYeV4UAxYbLfgw&usqp=CAU"), linear-gradient(90deg, black 70%, #222, #335);
+    background-image: url("https://assets-prd.punchdrink.com/wp-content/uploads/2020/01/29144238/Article-St-Elmos-Special-Cocktail.jpg");
     background-size: contain;
-    background-position: left bottom;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    background-position: left center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 /*# sourceMappingURL=main.css.map */

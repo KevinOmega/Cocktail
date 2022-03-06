@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include transition-ease;
 
   .home-center {
     color: $textLight;
@@ -24,7 +25,7 @@
   }
   &:hover .home-center {
     h2 {
-      transform: translateY(-13rem);
+      transform: translateY(-10rem);
     }
     h4 {
       transform: translateY(13rem);
@@ -32,11 +33,9 @@
   }
 
   @include big-screen() {
-    background-color: transparent;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVhh8ExxYUx8_uPK_MMaE7sYeV4UAxYbLfgw&usqp=CAU"),
-      linear-gradient(90deg, black 70%, #222, #335);
+    background-image: url("https://assets-prd.punchdrink.com/wp-content/uploads/2020/01/29144238/Article-St-Elmos-Special-Cocktail.jpg");
     background-size: contain;
-    background-position: left bottom;
-    justify-content: end;
+    background-position: left center;
+    justify-content: start;
   }
 }
