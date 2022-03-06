@@ -1,0 +1,9 @@
+@mixin transition-ease {
+  transition: all 1s ease-in-out;
+}
+
+@mixin big-screen {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}

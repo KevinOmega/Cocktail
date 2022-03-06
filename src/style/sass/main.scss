@@ -1,6 +1,8 @@
 $primary: #ff1020;
-$textLight: #fce;
+$textLight: #fff;
 $textDark: #012;
 $secondary: #222;
 
+@import "./mixins";
 @import "./navbar";
+@import "./home";

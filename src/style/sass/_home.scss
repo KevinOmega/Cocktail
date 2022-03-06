@@ -1,1 +1,42 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmMvpKizDUTS1HE5rPxYAzP58OOwAGueoeLg&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .home-center {
+    color: $textLight;
+    width: 50%;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .home-text {
+    @include transition-ease;
+  }
+  &:hover .home-center {
+    h2 {
+      transform: translateY(-13rem);
+    }
+    h4 {
+      transform: translateY(13rem);
+    }
+  }
+
+  @include big-screen() {
+    background-color: transparent;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVhh8ExxYUx8_uPK_MMaE7sYeV4UAxYbLfgw&usqp=CAU"),
+      linear-gradient(90deg, black 70%, #222, #335);
+    background-size: contain;
+    background-position: left bottom;
+    justify-content: end;
+  }
+}
