@@ -4,6 +4,7 @@ import NavBar from "./Components/NavBar";
 import Main from "./Pages/Main";
 import SingleCocktail from "./Pages/SingleCocktail";
 import Error from "./Pages/Error";
+import ProductsList from "./Pages/ProductsList";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Main />} />
+        <Route path="/list" element={<ProductsList />} />
         <Route path="/cocktail/:id" element={<SingleCocktail />} />
         <Route path="*" element={<Error />} />
       </Routes>

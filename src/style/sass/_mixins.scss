@@ -3,7 +3,13 @@
 }
 
 @mixin big-screen {
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 850px) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media screen and (min-width: 500px) {
     @content;
   }
 }
