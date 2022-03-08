@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useCallback, useEffect, useReducer } from "react";
 import { useContext } from "react";
 import { reducer } from "./reducer";
 
@@ -15,7 +15,7 @@ const initialState = {
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const fetchList = async () => {
+  const fetchList = useCallback(async () => {
     try {
       dispatch({ type: "LOAD" });
       const response = await fetch(`${url}${state.search}`);
@@ -43,11 +43,11 @@ const AppProvider = ({ children }) => {
         dispatch({ type: "SET_LIST", list: [] });
       }
     } catch {}
-  };
+  }, [state.search]);
 
   useEffect(() => {
     fetchList();
-  }, [state.search]);
+  }, [state.search, fetchList]);
   return (
     <AppContext.Provider value={{ ...state, dispatch }}>
       {children}
