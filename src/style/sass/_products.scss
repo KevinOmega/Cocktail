@@ -23,10 +23,11 @@
   }
   .search {
     padding: 1rem 2rem;
+    font-size: 0.8rem;
 
     input {
       height: 2rem;
-      width: 15rem;
+      width: 7rem;
       margin-left: 1rem;
     }
 
@@ -44,6 +45,13 @@
         content: "";
         display: block;
         top: 5.1rem;
+      }
+    }
+    @include medium-screen() {
+      font-size: 1.5rem;
+
+      input {
+        width: 15rem;
       }
     }
   }

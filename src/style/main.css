@@ -279,11 +279,12 @@
 
 .products .search {
   padding: 1rem 2rem;
+  font-size: 0.8rem;
 }
 
 .products .search input {
   height: 2rem;
-  width: 15rem;
+  width: 7rem;
   margin-left: 1rem;
 }
 
@@ -302,6 +303,15 @@
   content: "";
   display: block;
   top: 5.1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .products .search {
+    font-size: 1.5rem;
+  }
+  .products .search input {
+    width: 15rem;
+  }
 }
 
 .products:hover .border, .products:hover .search .border::before {
