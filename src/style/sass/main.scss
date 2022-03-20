@@ -2,8 +2,21 @@ $primary: #ff1020;
 $textLight: #fff;
 $textDark: #012;
 $secondary: #222;
+$scrollbar-background: #fdd;
+
+::-webkit-scrollbar {
+  width: 13px;
+  &-track {
+    background: $textDark;
+  }
+  &-thumb {
+    background: $primary;
+  }
+}
 
 @import "./mixins";
+@import "./about";
 @import "./navbar";
 @import "./home";
 @import "./_products";
+@import "./singleproduct";

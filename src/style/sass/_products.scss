@@ -20,14 +20,15 @@
 
   h2 {
     color: $primary;
+    font-size: 2rem;
   }
   .search {
     padding: 1rem 2rem;
-    font-size: 0.8rem;
+    font-size: 2rem;
 
     input {
       height: 2rem;
-      width: 7rem;
+      width: 9rem;
       margin-left: 1rem;
     }
 
@@ -47,54 +48,13 @@
         top: 5.1rem;
       }
     }
-
-    @include medium-screen() {
-      font-size: 1.5rem;
-
-      input {
-        width: 15rem;
-      }
-    }
   }
   &:hover .border {
     width: 100%;
   }
-  .loading {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-    margin-top: 5rem;
-
-    span {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 1rem;
-        height: 1rem;
-        background: $primary;
-        box-shadow: 0 0 10px $primary, 0 0 20px $primary, 0 0 40px $primary,
-          0 0 60px $primary, 0 0 80px $primary, 0 0 100px $primary;
-        border-radius: 50%;
-        animation: load 1s linear infinite;
-      }
-    }
-    @for $i from 1 through 20 {
-      .span#{$i} {
-        transform: rotate(18deg * $i);
-        &::before {
-          animation-delay: 0.05s * $i;
-        }
-      }
-    }
-  }
 
   .list {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     margin: 2rem;
@@ -113,7 +73,7 @@
     }
 
     img {
-      width: 9.5rem;
+      width: 7rem;
     }
 
     @include medium-screen() {
@@ -121,20 +81,22 @@
       gap: 3rem;
 
       img {
-        width: 12rem;
+        width: 8rem;
       }
     }
 
     @include big-screen() {
       grid-template-columns: repeat(3, 1fr);
-      gap: 5rem;
+      gap: 6rem 10rem;
       img {
         width: 13rem;
       }
+      top: 2rem;
     }
 
     .cocktail {
       position: relative;
+      text-decoration: none;
 
       &-header {
         height: 1.8rem;
@@ -168,6 +130,7 @@
   }
 
   .btn-more {
+    margin-top: -2rem;
     padding: 0.3rem;
     font-size: 1.3rem;
     text-decoration: none;
@@ -182,6 +145,19 @@
       color: $textLight;
     }
   }
+  @include medium-screen() {
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 1.3rem;
+
+    input {
+      width: 15rem;
+    }
+
+    .btn-more {
+      margin-top: 2rem;
+    }
+  }
 }
 
 @keyframes load {
@@ -191,5 +167,40 @@
   80%,
   100% {
     transform: scale(0);
+  }
+}
+
+.loading {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  margin-top: 5rem;
+
+  span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      background: $primary;
+      box-shadow: 0 0 10px $primary, 0 0 20px $primary, 0 0 40px $primary,
+        0 0 60px $primary, 0 0 80px $primary, 0 0 100px $primary;
+      border-radius: 50%;
+      animation: load 1s linear infinite;
+    }
+  }
+  @for $i from 1 through 20 {
+    .span#{$i} {
+      transform: rotate(18deg * $i);
+      &::before {
+        animation-delay: 0.05s * $i;
+      }
+    }
   }
 }
