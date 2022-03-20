@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 import List from "./List";
@@ -23,6 +23,7 @@ const Products = () => {
           if (index < 3) {
             return <List {...item} key={item.id} />;
           }
+          return "";
         })}
       </div>
       <Link to={"/list"} className="btn-more">

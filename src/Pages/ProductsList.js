@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import List from "../Components/List";
 import Loading from "../Components/Loading";
 import { useGlobalContext } from "../context";
@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const ProductsList = () => {
   const { search, loading, list, dispatch } = useGlobalContext();
-  const [input, setInput] = useState("");
 
   const changeSearch = (e) => {
     dispatch({ type: "SEARCH", value: e.target.value });
