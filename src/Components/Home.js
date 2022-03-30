@@ -27,6 +27,7 @@ const Home = () => {
         }
       default:
         console.log("error");
+        break;
     }
   };
   return (
