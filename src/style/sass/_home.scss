@@ -1,41 +1,69 @@
 .home {
   width: 100%;
   height: 100vh;
-  background-color: black;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxG3bMzOQVxM9psQofcR-v_LDIUIhNohGgAQ&usqp=CAU");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  position: absolute;
-  top: 0%;
-  left: 0;
+  background-image: linear-gradient(black 50%, #555);
   display: flex;
   justify-content: center;
-  align-items: center;
-  @include transition-ease;
+  align-items: flex-end;
 
-  .home-center {
-    color: $textLight;
-    width: 50%;
-    text-align: center;
-    font-size: 1.7rem;
-  }
-  .home-text {
-    @include transition-ease;
-  }
-  &:hover .home-center {
-    h2 {
-      transform: translateY(-8rem);
-    }
-    h4 {
-      transform: translateY(13rem);
-    }
-  }
+  &-center {
+    width: 100%;
+    height: 90%;
 
-  @include big-screen() {
-    background-image: url("https://assets-prd.punchdrink.com/wp-content/uploads/2020/01/29144238/Article-St-Elmos-Special-Cocktail.jpg");
-    background-size: contain;
-    background-position: left center;
-    justify-content: start;
+    h1 {
+      color: white;
+    }
+    .image {
+      border: 5px solid white;
+      box-shadow: 0 0 20px white, 0 0 40px white;
+      transition: 1s linear;
+      position: absolute;
+      opacity: 1;
+      left: 20%;
+      bottom: 15%;
+      width: 60%;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .left {
+      transform: translateX(-150%);
+      opacity: 0;
+    }
+    .right {
+      transform: translateX(150%);
+      opacity: 0;
+    }
+
+    button {
+      bottom: 5%;
+      transform: scale(2);
+      background: transparent;
+      border: none;
+      color: $primary;
+    }
+
+    #btn-left {
+      position: absolute;
+      left: 45%;
+    }
+    #btn-right {
+      position: absolute;
+      left: 55%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home {
+    align-items: center;
+    align-items: center;
+
+    &-center {
+      position: relative;
+      height: 50%;
+    }
   }
 }

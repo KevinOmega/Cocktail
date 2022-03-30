@@ -2,12 +2,15 @@
   @include section;
 }
 #single-product {
-  height: auto;
+  height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   background: linear-gradient(90deg, $textDark 40%, $primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .single-product {
     padding: 0.3rem 0;
@@ -39,10 +42,10 @@
       }
       .info {
         font-family: "Courier New", Courier, monospace;
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
       p {
-        font-size: 0.7rem;
+        font-size: 1rem;
       }
     }
     .btn {
@@ -53,11 +56,9 @@
       border-radius: 10%;
       text-decoration: none;
       font-size: 0.8rem;
-      @include transition-ease;
 
       &:hover {
-        background: $textDark;
-        color: $primary;
+        background: hsl(0, 70%, 59%);
       }
     }
   }

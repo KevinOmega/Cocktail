@@ -12,12 +12,11 @@
   background: $primary;
 
   &-center {
-    font-size: 1rem;
-    font-family: sans-serif;
-    margin-left: 3rem;
-  }
-  &:hover &-center {
-    animation: logo 2s ease-in-out;
+    margin-left: 2em;
+    img {
+      width: 12em;
+      padding: 1rem;
+    }
   }
 
   .links {

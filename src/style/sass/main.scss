@@ -14,6 +14,12 @@ $scrollbar-background: #fdd;
   }
 }
 
+body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 @import "./mixins";
 @import "./about";
 @import "./navbar";

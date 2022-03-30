@@ -10,6 +10,12 @@
   background: #ff1020;
 }
 
+body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 #about {
   position: absolute;
   top: 200vh;
@@ -21,7 +27,7 @@
 
 .contact {
   position: absolute;
-  top: 4rem;
+  top: 7rem;
   width: 90%;
   left: 5%;
   height: auto;
@@ -30,7 +36,7 @@
 }
 
 .contact h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   padding: 0;
 }
@@ -72,6 +78,7 @@
 }
 
 .contact-center textarea {
+  margin-top: 3em;
   height: 2.5rem;
   width: 80%;
 }
@@ -88,7 +95,7 @@
     grid-column: 1/3;
   }
   .contact-center #textarea textarea {
-    height: 4rem;
+    height: 6rem;
   }
 }
 
@@ -98,7 +105,7 @@
   }
   .contact-center #textarea textarea {
     width: 30%;
-    height: 4rem;
+    height: 6rem;
   }
 }
 
@@ -143,15 +150,15 @@ footer .social ul {
 
 footer .social ul li {
   list-style: none;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 
 footer .social ul li a {
   color: #fff;
   font-size: 2rem;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 
 footer .social ul li:hover {
@@ -187,14 +194,12 @@ footer .social ul li:hover a {
 }
 
 .navbar-center {
-  font-size: 1rem;
-  font-family: sans-serif;
-  margin-left: 3rem;
+  margin-left: 2em;
 }
 
-.navbar:hover .navbar-center {
-  -webkit-animation: logo 2s ease-in-out;
-          animation: logo 2s ease-in-out;
+.navbar-center img {
+  width: 12em;
+  padding: 1rem;
 }
 
 .navbar .links {
@@ -218,8 +223,8 @@ footer .social ul li:hover a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 
 @media screen and (min-width: 850px) {
@@ -354,57 +359,86 @@ footer .social ul li:hover a {
 .home {
   width: 100%;
   height: 100vh;
-  background-color: black;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxG3bMzOQVxM9psQofcR-v_LDIUIhNohGgAQ&usqp=CAU");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  position: absolute;
-  top: 0%;
-  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, black), to(#555));
+  background-image: linear-gradient(black 50%, #555);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.home .home-center {
-  color: #fff;
-  width: 50%;
-  text-align: center;
-  font-size: 1.7rem;
+.home-center {
+  width: 100%;
+  height: 90%;
 }
 
-.home .home-text {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+.home-center h1 {
+  color: white;
 }
 
-.home:hover .home-center h2 {
-  -webkit-transform: translateY(-8rem);
-          transform: translateY(-8rem);
+.home-center .image {
+  border: 5px solid white;
+  -webkit-box-shadow: 0 0 20px white, 0 0 40px white;
+          box-shadow: 0 0 20px white, 0 0 40px white;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  position: absolute;
+  opacity: 1;
+  left: 20%;
+  bottom: 15%;
+  width: 60%;
 }
 
-.home:hover .home-center h4 {
-  -webkit-transform: translateY(13rem);
-          transform: translateY(13rem);
+.home-center img {
+  width: 100%;
 }
 
-@media screen and (min-width: 850px) {
+.home-center .left {
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+  opacity: 0;
+}
+
+.home-center .right {
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  opacity: 0;
+}
+
+.home-center button {
+  bottom: 5%;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  background: transparent;
+  border: none;
+  color: #ff1020;
+}
+
+.home-center #btn-left {
+  position: absolute;
+  left: 45%;
+}
+
+.home-center #btn-right {
+  position: absolute;
+  left: 55%;
+}
+
+@media screen and (max-width: 1000px) {
   .home {
-    background-image: url("https://assets-prd.punchdrink.com/wp-content/uploads/2020/01/29144238/Article-St-Elmos-Special-Cocktail.jpg");
-    background-size: contain;
-    background-position: left center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+  }
+  .home-center {
+    position: relative;
+    height: 50%;
   }
 }
 
@@ -461,8 +495,8 @@ footer .social ul li:hover a {
   margin: auto;
   position: relative;
   bottom: 1.2rem;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 
 .products .search .border::before {
@@ -527,6 +561,9 @@ footer .social ul li:hover a {
 .products .list .cocktail {
   position: relative;
   text-decoration: none;
+  border: 5px solid #ff1020;
+  -webkit-box-shadow: 0 0 30px #ff1020;
+          box-shadow: 0 0 30px #ff1020;
 }
 
 .products .list .cocktail-header {
@@ -540,7 +577,6 @@ footer .social ul li:hover a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 2px solid #ff1020;
   border-bottom: none;
   color: #ff1020;
 }
@@ -553,14 +589,15 @@ footer .social ul li:hover a {
   height: 85%;
   opacity: 0;
   z-index: -1;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 
 .products .list .cocktail:hover .cocktail-info {
   z-index: 1;
   opacity: 0.6;
-  background: #ff1020;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff1020), to(black));
+  background: linear-gradient(#ff1020, black);
   color: #fff;
   top: 15%;
 }
@@ -573,8 +610,8 @@ footer .social ul li:hover a {
   border: 3px solid #ff1020;
   color: #ff1020;
   background: white;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
@@ -868,13 +905,22 @@ footer .social ul li:hover a {
 }
 
 #single-product {
-  height: auto;
+  height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   background: -webkit-gradient(linear, left top, right top, color-stop(40%, #012), to(#ff1020));
   background: linear-gradient(90deg, #012 40%, #ff1020);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #single-product .single-product {
@@ -920,11 +966,11 @@ footer .social ul li:hover a {
 
 #single-product .single-product-center .info {
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 #single-product .single-product-center p {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 #single-product .single-product .btn {
@@ -935,13 +981,10 @@ footer .social ul li:hover a {
   border-radius: 10%;
   text-decoration: none;
   font-size: 0.8rem;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
 #single-product .single-product .btn:hover {
-  background: #012;
-  color: #ff1020;
+  background: #e04d4d;
 }
 
 @media screen and (min-width: 500px) {
