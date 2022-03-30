@@ -25,6 +25,8 @@ const Home = () => {
         } else {
           setIndex(index - 1);
         }
+      default:
+        console.log("error");
     }
   };
   return (

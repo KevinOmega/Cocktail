@@ -419,17 +419,21 @@ footer .social ul li:hover a {
   color: #ff1020;
 }
 
+.home-center button:hover {
+  color: white;
+}
+
 .home-center #btn-left {
   position: absolute;
-  left: 45%;
+  left: 40%;
 }
 
 .home-center #btn-right {
   position: absolute;
-  left: 55%;
+  left: 60%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .home {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -439,6 +443,9 @@ footer .social ul li:hover a {
   .home-center {
     position: relative;
     height: 50%;
+  }
+  .home-center button {
+    bottom: -4rem;
   }
 }
 

@@ -43,20 +43,23 @@
       background: transparent;
       border: none;
       color: $primary;
+      &:hover {
+        color: white;
+      }
     }
 
     #btn-left {
       position: absolute;
-      left: 45%;
+      left: 40%;
     }
     #btn-right {
       position: absolute;
-      left: 55%;
+      left: 60%;
     }
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .home {
     align-items: center;
     align-items: center;
@@ -64,6 +67,10 @@
     &-center {
       position: relative;
       height: 50%;
+
+      button {
+        bottom: -4rem;
+      }
     }
   }
 }
