@@ -25,6 +25,7 @@ const Home = () => {
         } else {
           setIndex(index - 1);
         }
+        break;
       default:
         console.log("error");
         break;
