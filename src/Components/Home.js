@@ -15,7 +15,7 @@ const Home = () => {
             Because never is a bad time to cool off. <br></br>If you wanna see
             more of our products please click on the button below
           </p>
-          <a href="/list#products">See more</a>
+          <a href="/list">See more</a>
         </div>
       </div>
     </div>

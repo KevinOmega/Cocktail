@@ -55,6 +55,9 @@
             align-items: center;
             gap: 1.5rem;
 
+            input{
+                width: 100%;
+            }
         }
         .list{
             grid-template-columns: 1fr;
