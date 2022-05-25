@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NavBar from "./Components/NavBar";
 import Main from "./Pages/Main";
 import SingleCocktail from "./Pages/SingleCocktail";
 import Error from "./Pages/Error";
