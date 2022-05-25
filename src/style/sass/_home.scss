@@ -33,7 +33,7 @@
                 margin: 2rem;
                 text-align: center;
             }
-            a{
+            .btn-link{
                 @include btn-primary;
                 text-decoration: none;
             }

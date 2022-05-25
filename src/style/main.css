@@ -126,7 +126,7 @@ p, a, button {
     -webkit-transition: 1s ease;
     transition: 1s ease;
     position: fixed;
-    width: 100%;
+    width: 100vh;
     height: 100vh;
     background: #fff;
     top: 0;
@@ -264,7 +264,7 @@ p, a, button {
     -webkit-transition: 1s ease;
     transition: 1s ease;
     position: fixed;
-    width: 100%;
+    width: 100vh;
     height: 100vh;
     background: #fff;
     top: 0;
@@ -380,7 +380,7 @@ p, a, button {
   text-align: center;
 }
 
-#home .home-center .home-info a {
+#home .home-center .home-info .btn-link {
   padding: 0.5rem 1.5rem;
   border-radius: 30px;
   border: none;
@@ -390,11 +390,11 @@ p, a, button {
   text-decoration: none;
 }
 
-#home .home-center .home-info a:hover {
+#home .home-center .home-info .btn-link:hover {
   background: #ff000d;
 }
 
-#home .home-center .home-info a:active {
+#home .home-center .home-info .btn-link:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   -webkit-box-shadow: 0 0 10px #000;
