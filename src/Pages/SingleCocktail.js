@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Loading from "../Components/Loading";
+import NavBar from "../Components/NavBar";
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 const SingleCocktail = () => {
@@ -64,44 +65,48 @@ const SingleCocktail = () => {
   const { name, category, info, glass, instructions, image, ingredients } =
     drink;
   return (
-    <section id="single-product">
-      <div className="single-product">
-        <div className="single-product-header">
-          <h2>{name}</h2>
-          <img src={image} alt={name} />
+    <>
+      <NavBar nameClass={"white-navbar"} />
+      <section id="single-product">
+        <div className="single-product">
+          <div className="single-product-hero">
+            <img src={image} alt={name} />
+          </div>
+
+          <div className="single-product-center">
+            <h2>{name}</h2>
+            <h3>
+              <span className="info">Category: </span>
+              {category}
+            </h3>
+            <h3>
+              <span className="info">Info: </span>
+              {info}
+            </h3>
+            <h3>
+              <span className="info">Glass: </span>
+              {glass}
+            </h3>
+            <h3>
+              <span className="info">Instructions: </span>
+              {instructions}
+            </h3>
+            <h3 className="info">Ingredients : </h3>
+            {ingredients.map(
+              (item, index) =>
+                item && (
+                  <p className="ingredients" key={index}>
+                    {index + 1} ) {item}
+                  </p>
+                )
+            )}
+            <Link className="btn" to={"/list"}>
+              Back to the products
+            </Link>
+          </div>
         </div>
-        <div className="single-product-center">
-          <h3>
-            <span className="info">Category: </span>
-            {category}
-          </h3>
-          <h3>
-            <span className="info">Info: </span>
-            {info}
-          </h3>
-          <h3>
-            <span className="info">Glass: </span>
-            {glass}
-          </h3>
-          <p>
-            <span className="info">Instructions: </span>
-            {instructions}
-          </p>
-          <h4 className="info">Ingredients : </h4>
-          {ingredients.map(
-            (item, index) =>
-              item && (
-                <p className="ingredients" key={index}>
-                  {index + 1} ) {item}
-                </p>
-              )
-          )}
-        </div>
-        <Link className="btn" to={"/"}>
-          Back Home
-        </Link>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

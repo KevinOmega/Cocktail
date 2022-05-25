@@ -1,28 +1,74 @@
-$primary: #ff1020;
-$textLight: #fff;
-$textDark: #012;
-$secondary: #222;
-$scrollbar-background: #fdd;
 
-::-webkit-scrollbar {
-  width: 13px;
-  &-track {
-    background: $textDark;
-  }
-  &-thumb {
-    background: $primary;
-  }
-}
+
+$primary: #D10000;
+$white : #fff;
+$black : #000;
+$gray : #555;
+$light-gray: #ccc8;
+
+$half-primary : #ff000d;
+
+// font size
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+$dancing-script : 'Dancing Script', "cursive";
+$montserrat : 'Montserrat',
+sans-serif;
+$lora : 'Lora',
+serif;
+
 
 body {
   margin: 0;
-  width: 100vw;
+  padding: 0;
   overflow-x: hidden;
 }
 
+
+// Global
+
+h1,h2,h3,h4{
+  font-family: $montserrat;
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.7rem;
+}
+
+h4{
+  font-size: 1.5rem;
+}
+
+p,a,button{
+  font-family: $lora;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+
+
 @import "./mixins";
-@import "./about";
 @import "./navbar";
 @import "./home";
 @import "./_products";
+@import "./productList";
 @import "./singleproduct";
+@import "./footer";
+@import "./loading";

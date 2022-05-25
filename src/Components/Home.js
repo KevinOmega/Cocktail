@@ -1,62 +1,22 @@
-import React, { useState } from "react";
-import { useGlobalContext } from "../context";
-import { nb } from "../nb";
-import {
-  BsFillArrowRightCircleFill,
-  BsFillArrowLeftCircleFill,
-} from "react-icons/bs";
+import React from "react";
 
 const Home = () => {
-  const { home } = useGlobalContext();
-  const [index, setIndex] = useState(2);
-
-  const changeIndex = (direction) => {
-    switch (direction) {
-      case "up":
-        if (index === nb.length) {
-          setIndex(1);
-        } else {
-          setIndex(index + 1);
-        }
-        break;
-      case "down":
-        if (index === 1) {
-          setIndex(3);
-        } else {
-          setIndex(index - 1);
-        }
-        break;
-      default:
-        console.log("error");
-        break;
-    }
-  };
   return (
-    <div className="home" id="home" ref={home}>
+    <div className="home" id="home">
       <div className="home-center">
-        {nb.map((item) => {
-          return (
-            <div
-              key={item.id}
-              className={` ${
-                item.id === index
-                  ? "center"
-                  : item.id === index + 1 ||
-                    (index === nb.length && item.id === 1)
-                  ? "left"
-                  : "right"
-              } image`}
-            >
-              <img src={item.img} alt="a" />
-            </div>
-          );
-        })}
-        <button id="btn-left" onClick={() => changeIndex("down")}>
-          <BsFillArrowLeftCircleFill />
-        </button>
-        <button id="btn-right" onClick={() => changeIndex("up")}>
-          <BsFillArrowRightCircleFill />
-        </button>
+        <div className="hero">
+          <img
+            src="https://www.veggiessavetheday.com/wp-content/uploads/2018/06/Easy-Berry-Vodka-Cocktails-FI.jpg"
+            alt="hero"
+          />
+        </div>
+        <div className="home-info">
+          <p>
+            Because never is a bad time to cool off. <br></br>If you wanna see
+            more of our products please click on the button below
+          </p>
+          <a href="/list#products">See more</a>
+        </div>
       </div>
     </div>
   );

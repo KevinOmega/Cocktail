@@ -1,12 +1,20 @@
-import React, { useState } from "react";
-import logo from "../images/logo.svg";
+import React, { useEffect, useState } from "react";
 
-const NavBar = () => {
+const NavBar = ({ nameClass }) => {
   const [isClicked, setIsClicked] = useState(false);
+
+  useEffect(() => {
+    if (isClicked) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "visible";
+    }
+  }, [isClicked]);
+
   return (
-    <div className="navbar">
+    <div className={nameClass}>
       <div className="navbar-center">
-        <img src={logo} alt="Cocktail List" />
+        <h2>Cocktail List</h2>
       </div>
       <nav className={`links ${isClicked && "links-active"}`}>
         <ul>
@@ -16,19 +24,24 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a onClick={() => setIsClicked(false)} href="/#products">
-              Products
+            <a onClick={() => setIsClicked(false)} href="/#featured">
+              Featured
             </a>
           </li>
           <li>
-            <a onClick={() => setIsClicked(false)} href="/#about">
-              About
+            <a onClick={() => setIsClicked(false)} href="/list#products">
+              Products
             </a>
           </li>
         </ul>
       </nav>
-      <div className="btn-container" onClick={() => setIsClicked(!isClicked)}>
-        <div className={`links-btn ${isClicked && "links-btn-active"}`} />
+      <div
+        className={`btn-container ${isClicked && "btn-container-active"}`}
+        onClick={() => setIsClicked(!isClicked)}
+      >
+        <div className="line line-1"></div>
+        <div className="line line-2"></div>
+        <div className="line line-3"></div>
       </div>
     </div>
   );

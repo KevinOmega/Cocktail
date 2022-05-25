@@ -1,0 +1,48 @@
+#footer{
+    position: relative;
+    background: $gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0 ;
+    color: $white;
+
+    .footer-text{
+        font-size: 1.2rem;
+        font-family: $lora;
+    }
+    .footer-icons{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-size: 2.5rem;
+        height: 100%;
+        
+        span{
+            cursor: pointer;
+            &:active{
+                transform: scale(0.95);
+            }
+        }
+    }
+    @include medium-screen(){
+        .footer-text{
+            font-size: 1.2rem;
+        }
+        .footer-icons{
+            font-size: 2rem;
+            gap: 2rem;
+        }
+    }
+
+    @include small-screen(){
+        .footer-text{
+            font-size: 0.9rem;
+        }
+        .footer-icons{
+            font-size: 1.5rem;
+            gap: 1rem;
+        }
+    }
+    
+}

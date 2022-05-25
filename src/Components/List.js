@@ -1,22 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const List = ({ id, name, category, image, info }) => {
+const List = ({ id, name, category, image, info, nameClass }) => {
   return (
-    <Link className="cocktail" to={`/cocktail/${id}`}>
-      <div className="cocktail-center">
-        <div className="cocktail-header">
-          <h3>{name}</h3>
-        </div>
-        <div className="cocktail-img">
-          <img src={image} alt={name} />
-        </div>
+    <article className={`cocktail card ${nameClass}`}>
+      <div className="cocktail-hero">
+        <img src={image} alt={name} />
       </div>
-      <div className="cocktail-info">
-        <h4> {category}</h4>
+      <div className="cocktail-center">
+        <h3>{name}</h3>
+        <h4>{category}</h4>
         <p>{info}</p>
       </div>
-    </Link>
+      <div className="cocktail-btn">
+        <Link className="btn-link" to={`/cocktail/${id}`}>
+          See the product
+        </Link>
+      </div>
+    </article>
   );
 };
 
