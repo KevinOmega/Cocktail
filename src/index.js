@@ -7,7 +7,9 @@ import "./style/main.css";
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
-      <App />
+      <div className="body">
+        <App />
+      </div>
     </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
