@@ -47,7 +47,7 @@ const Products = () => {
             }
             return <List nameClass={nameClass} {...item} key={item.id} />;
           }
-          return "";
+          return;
         })}
 
         <span
