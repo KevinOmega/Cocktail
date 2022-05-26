@@ -29,8 +29,9 @@ const Products = () => {
     <div id="featured" className="products">
       <h2>Products</h2>
       <div className="featured-center">
-        {list.map((item, index) => {
-          if (index < 5) {
+        {list
+          .filter((itme, index) => index < 5)
+          .map((item, index) => {
             let nameClass = "default-card";
             if (index === currentIndex) {
               nameClass = "current-card";
@@ -46,9 +47,7 @@ const Products = () => {
               nameClass = "prev-card";
             }
             return <List nameClass={nameClass} {...item} key={item.id} />;
-          }
-          return;
-        })}
+          })}
 
         <span
           className="btn-prev"
